@@ -1,7 +1,3 @@
 # See https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt#syntax
 
-# Do not index https://kitswas.github.io/
-User-agent: *
-Disallow: /$
-
 Sitemap: https://kitswas.github.io/git-for-all/sitemap.xml
