@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Keep the search bots away -->
+    <meta name="robots" content="noindex, nofollow, noimageindex, noarchive" />
+
+    <title>Swastik's Personal Website</title>
+
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+
+    <!-- Fonts here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon here -->
+    <!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+  </head>
+
+  <body>
+    <h1>Swastik Pal</h1>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/swastik-pal/">
+        <img
+          src="../assets/img/In-Blue-34@2x.png"
+          alt="LinkedIn"
+          height="24"
+          width="24"
+        />
+        linkedin.com/in/swastik-pal
+      </a>
+      <a href="https://github.com/kitswas/">
+        <img
+          src="../assets/img/github-mark-white.svg"
+          alt="GitHub"
+          height="24"
+          width="24"
+        />
+        github.com/kitswas
+      </a>
+    </div>
+
+    <main id="main_content">
+      <p>
+        Hello! I am Swastik. <br />
+        I am an engineer with a background in both Computer Science and
+        Electronics.
+      </p>
+
+      <p>
+        I believe,
+        <q>
+          Open-source is like Mother's cooking &mdash; essential, unpaid,
+          underappreciated, good for you, and made with love.
+        </q>
+      </p>
+
+      <p>
+        I love tinkering and building projects. <br />
+        To see some interesting projects, view my pinned repositories on GitHub.
+        (link above)
+      </p>
+
+      <p>
+        Don't believe they are interesting? <br />
+        The background of this website is a screenshot taken in
+        <a href="https://veloren.net/">Veloren</a>, an open-world, open-source
+        voxel RPG I briefly worked on. <br />
+        I urge you to check it out.
+      </p>
+
+      <p>You might also like:</p>
+      <ul>
+        <li>
+          <a href="https://kitswas.github.io/git-for-all/">Git for All</a>, a
+          website I created to help non-tech folks learn Git.
+        </li>
+        <li>
+          <a href="https://kitswas.github.io/VirtualGamePad/"
+            >The Virtual Gamepad Project</a
+          >, a solution that lets you use your Android phone as a gamepad for
+          your Windows or Linux PC.
+        </li>
+      </ul>
+
+      <p>Leave some ⭐s on my repositories to encourage me to do more!</p>
+
+      <script src="assets/js/backend.js"></script>
+      <p id="counter-container">
+        You are the #<span id="visitor-count">...</span> visitor to this page,
+        this month.
+      </p>
+
+      <form id="contact-form">
+        <h2>Tell me something</h2>
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea
+          name="message"
+          placeholder="Your message..."
+          required
+        ></textarea>
+
+        <input
+          type="text"
+          name="bot_challenge"
+          style="display: none !important"
+          tabindex="-1"
+          autocomplete="off"
+        />
+
+        <div class="form-footer">
+          <button type="submit">Send Message</button>
+          <span class="info">
+            <span class="info-text">
+              Your message will be stored in an AWS DB in India. <br />
+              I will respond to genuine messages via email.
+            </span>
+            <span
+              class="toggle"
+              onclick="event.target.parentElement.classList.toggle('show');"
+              >i</span
+            >
+          </span>
+        </div>
+        <p id="form-status"></p>
+      </form>
+
+      <sub>
+        This version of the webpage is for humans. Any crawlers that do not
+        respect the <code>nofollow</code> policy can follow
+        <a href="https://kitswas.github.io/content/well.html" rel="nofollow"
+          >this link</a
+        >
+        to the nonsense version.
+      </sub>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 kitswas.github.io. All rights reserved.</p>
+      <p>No content on this website may be reproduced without permission.</p>
+    </footer>
+  </body>
+</html>

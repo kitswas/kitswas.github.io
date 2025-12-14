@@ -1,3 +1,4 @@
 # See https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt#syntax
 
-Sitemap: https://kitswas.github.io/git-for-all/sitemap.xml
+User-agent: *
+Disallow: /content/well.html
