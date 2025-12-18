@@ -1,0 +1,125 @@
+/* Animations separated out from styles.css */
+
+/* ======================
+   CSS Animations
+   ====================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bgPan {
+  0% {
+    background-position: right center;
+  }
+  50% {
+    background-position: left center;
+  }
+  100% {
+    background-position: right center;
+  }
+}
+
+/* Apply a gentle page fade/slide for the main children */
+.anim-page > * {
+  animation: fadeInUp 650ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
+}
+
+h1.anim-fade {
+  animation: fadeInUp 820ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
+}
+
+main.anim-slide-up {
+  animation: fadeInUp 900ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
+}
+
+/* Stagger paragraphs in the main area for a pleasant flow */
+main p {
+  animation: fadeInUp 700ms ease both;
+}
+main p:nth-of-type(1) {
+  animation-delay: 120ms;
+}
+main p:nth-of-type(2) {
+  animation-delay: 240ms;
+}
+main p:nth-of-type(3) {
+  animation-delay: 360ms;
+}
+main p:nth-of-type(4) {
+  animation-delay: 480ms;
+}
+main p:nth-of-type(5) {
+  animation-delay: 600ms;
+}
+main p:nth-of-type(6) {
+  animation-delay: 720ms;
+}
+main p:nth-of-type(7) {
+  animation-delay: 840ms;
+}
+main p:nth-of-type(8) {
+  animation-delay: 960ms;
+}
+
+/* Subtle continuous background movement */
+body.anim-page {
+  animation: bgPan linear infinite;
+  /* Ensure pan doesn't expose edges. Use cover to fill viewport and crop sides. */
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Button micro-interactions */
+#load_button.anim-pop {
+  animation: pop 1800ms ease-in-out;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+#load_button.anim-pop:hover,
+#load_button.anim-pop:focus {
+  transform: scale(1.02);
+  animation-play-state: paused;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Footer entrance */
+footer.anim-fade-delay {
+  animation: fadeInUp 900ms ease both;
+  animation-delay: 1s;
+}
+
+/* Reduce motion preference respect */
+@media (prefers-reduced-motion: reduce) {
+  .anim-page > *,
+  h1.anim-fade,
+  main.anim-slide-up,
+  main p,
+  #load_button.anim-pop,
+  footer.anim-fade-delay {
+    animation: none !important;
+    transition: none !important;
+  }
+  body.anim-page {
+    animation: none !important;
+    background-attachment: scroll;
+  }
+}

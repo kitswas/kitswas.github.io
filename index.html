@@ -12,6 +12,7 @@
     <title>kitswas.github.io</title>
 
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/anim.css" />
 
     <!-- Fonts here -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,10 +26,10 @@
     <!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
   </head>
 
-  <body>
-    <h1>Welcome, Visitor!</h1>
+  <body class="anim-page">
+    <h1 class="anim-fade">Welcome, Visitor!</h1>
 
-    <main id="main_content">
+    <main id="main_content" class="anim-slide-up">
       <p>What brings you here today?</p>
 
       <p>You are currently viewing my personal website.</p>
@@ -67,16 +68,22 @@
         </noscript>
       </div>
 
-      <button id="load_button" onclick="loadPage()" type="button">
+      <button
+        id="load_button"
+        class="anim-pop"
+        onclick="loadPage()"
+        type="button"
+      >
         Continue
       </button>
     </main>
 
-    <footer>
+    <footer class="anim-fade-delay">
       <p>&copy; 2024 kitswas.github.io. All rights reserved.</p>
       <p>No content on this website may be reproduced without permission.</p>
     </footer>
 
     <script src="assets/js/backend.js"></script>
+    <script src="assets/js/bgpan.js"></script>
   </body>
 </html>
