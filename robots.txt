@@ -1,4 +1,4 @@
 # See https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt#syntax
 
 User-agent: *
-Disallow: /content/well.html
+Disallow: /content/*
