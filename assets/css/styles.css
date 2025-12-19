@@ -102,6 +102,7 @@ footer {
 
 .danger {
   background-color: var(--danger-color);
+  font-weight: 600;
 }
 
 .warning {
@@ -110,6 +111,7 @@ footer {
 
 #load_button {
   width: 100%;
+  font-size: large;
 }
 
 input,
